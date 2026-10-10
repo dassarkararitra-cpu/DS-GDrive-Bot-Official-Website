@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DS GDrive Bot | Professional Telegram Cloud Integration</title>
+    <!-- Updated Title to remove restricted words -->
+    <title>DS GDrive Bot | Connect Telegram to Google Drive</title>
+    
+    <!-- Added Favicon to make the logo visible in Google Search results -->
+    <link rel="icon" type="image/png" href="36735.png">
+    
+    <!-- Added Meta Description to control the text shown in search results -->
+    <meta name="description" content="Upload files, clone links, and manage your Google Drive storage directly from Telegram. Save data and time with fast cloud-to-cloud transfers.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -52,14 +60,15 @@
 
     <!-- Hero Section -->
     <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+        <!-- Replaced restricted "Enterprise Cloud Automation" tag -->
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold tracking-widest uppercase mb-6 border border-blue-200 dark:border-blue-800 shadow-sm">
-            Enterprise Cloud Automation
+            Fast & Simple Cloud Management
         </div>
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 tracking-tight mb-6 leading-tight">
-            High-Performance Cloud Engine <br class="hidden md:block"> Built Inside Telegram
+            Manage Google Drive <br class="hidden md:block"> Directly from Telegram
         </h1>
         <p class="mt-4 max-w-3xl text-lg md:text-xl text-gray-600 dark:text-gray-400 mx-auto mb-10 leading-relaxed">
-            Eliminate double bandwidth usage and local disk overhead. Stream files, clone cloud assets instantly, generate self-destructing download links, and manage cloud permissions directly from your interface.
+            Save mobile data and device storage. Upload files, clone public links instantly, create shareable downloads, and organize your cloud storage—all without leaving your chat.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
             <a href="https://t.me/DS_GDrive_bot" target="_blank" class="bg-primary hover:bg-primaryHover text-white text-lg px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/40 hover:-translate-y-1 flex items-center gap-2">
@@ -67,7 +76,7 @@
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
             <a href="#functionality" class="bg-white dark:bg-darkCard text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-lg px-8 py-3.5 rounded-full font-semibold transition-all shadow-sm hover:-translate-y-1">
-                Explore Core Engine
+                Explore Features
             </a>
         </div>
     </section>
@@ -76,9 +85,9 @@
     <section id="functionality" class="py-20 bg-white dark:bg-darkCard/40 border-t border-gray-100 dark:border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">Platform Capabilities & API Integration</h2>
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">Everything You Need in One Bot</h2>
                 <p class="mt-4 text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                    DS GDrive Bot utilizes granular REST APIs to deliver secure, encrypted, and modular cloud workflows. Below is a comprehensive breakdown of automated workflows.
+                    DS GDrive Bot connects your Telegram account to Google Drive seamlessly. Here is what you can do straight from your chat.
                 </p>
             </div>
             
@@ -86,122 +95,68 @@
                 
                 <!-- Feature 1: Authentication -->
                 <div class="group bg-gray-50 dark:bg-darkCard rounded-2xl p-8 border border-gray-200 dark:border-gray-700/80 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                     <div class="flex items-center gap-3 mb-4 relative">
                         <span class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-primary font-bold text-lg shadow-inner">1</span>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Seamless OAuth 2.0 Authentication</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Secure Google Login</h3>
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed relative">
-                        Users initiate connection by triggering <code>/start</code>. The bot generates a verified Google OAuth consent flow where the user explicitly grants access. Once validated, persistent session menus activate instantly without manual re-authorization.
+                        Connect your account safely. The bot uses verified Google login, meaning you never share your password with us. Once connected, your session stays active so you don't have to keep logging in.
                     </p>
-                    <div class="bg-white dark:bg-darkBg p-4 rounded-xl border border-gray-200 dark:border-gray-700 font-mono text-xs text-gray-700 dark:text-gray-300 break-words">
-                        <span class="text-primary font-semibold">API Utilization:</span> OAuth 2.0 Web Token Exchange & Token Refresh Lifecycle with secure isolated credential persistence.
-                    </div>
                 </div>
                 
                 <!-- Feature 2: High-Speed Upload Engine -->
                 <div class="group bg-gray-50 dark:bg-darkCard rounded-2xl p-8 border border-gray-200 dark:border-gray-700/80 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                     <div class="flex items-center gap-3 mb-4 relative">
                         <span class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-primary font-bold text-lg shadow-inner">2</span>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Real-Time Media Streaming</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Direct File Uploads</h3>
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed relative">
-                        Forward documents, photos, audio, videos, or animations directly into the chat. The bot streams binary byte-streams directly into the designated secure cloud folder with live progress metrics.
+                        Forward documents, photos, audio, or videos into the chat. The bot instantly uploads them directly into your secure Google Drive folder while showing you live progress.
                     </p>
-                    <div class="bg-white dark:bg-darkBg p-4 rounded-xl border border-gray-200 dark:border-gray-700 font-mono text-xs text-gray-700 dark:text-gray-300 break-all">
-                        <span class="text-primary font-semibold">API Utilization:</span> <code>POST /upload/drive/v3/files?uploadType=resumable</code> for non-blocking buffered transmission.
-                    </div>
                 </div>
 
                 <!-- Feature 3: Server-Side Instant Cloning -->
                 <div class="group bg-gray-50 dark:bg-darkCard rounded-2xl p-8 border border-gray-200 dark:border-gray-700/80 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                     <div class="flex items-center gap-3 mb-4 relative">
                         <span class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-primary font-bold text-lg shadow-inner">3</span>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Zero-Bandwidth Duplication</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Instant File Cloning</h3>
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed relative">
-                        When users submit public cloud links, the bot bypasses network downlinking entirely. It leverages direct server-to-server duplication to clone the asset directly into the user's selected directory in seconds.
+                        Send a public Google Drive link to the bot to clone the file instantly. It copies directly from Google's servers to your Drive, bypassing your phone's network completely.
                     </p>
-                    <div class="bg-white dark:bg-darkBg p-4 rounded-xl border border-gray-200 dark:border-gray-700 font-mono text-xs text-gray-700 dark:text-gray-300 break-all">
-                        <span class="text-primary font-semibold">API Utilization:</span> <code>POST https://www.googleapis.com/drive/v3/files/{fileId}/copy</code> bypassing external network interfaces.
-                    </div>
                 </div>
 
-                <!-- Feature 4: Internal Server Fast-Path -->
+                <!-- Feature 4: Signed Temporary Links -->
                 <div class="group bg-gray-50 dark:bg-darkCard rounded-2xl p-8 border border-gray-200 dark:border-gray-700/80 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                     <div class="flex items-center gap-3 mb-4 relative">
                         <span class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-primary font-bold text-lg shadow-inner">4</span>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Secure Internal Routing</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Secure Temporary Links</h3>
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed relative">
-                        Submitting platform-generated temporary links triggers an authenticated internal fast-path. The file is seamlessly cloned from a secure content distribution network directly into the user's private space.
+                        Generate fast, secure download links for your files without exposing your actual Google Drive account. These links automatically expire after 24 hours for added privacy.
                     </p>
-                    <div class="bg-white dark:bg-darkBg p-4 rounded-xl border border-gray-200 dark:border-gray-700 font-mono text-xs text-gray-700 dark:text-gray-300 break-words">
-                        <span class="text-primary font-semibold">API Utilization:</span> Dynamically leases reader permissions via <code>drive.permissions.create</code> and executes atomic backend duplication.
-                    </div>
                 </div>
 
-                <!-- Feature 5: Signed Temporary Links -->
+                <!-- Feature 5: Drive Explorer & Privacy Controls -->
                 <div class="group bg-gray-50 dark:bg-darkCard rounded-2xl p-8 border border-gray-200 dark:border-gray-700/80 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                     <div class="flex items-center gap-3 mb-4 relative">
                         <span class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-primary font-bold text-lg shadow-inner">5</span>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Self-Destructing 24-Hour Links</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">File Management</h3>
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed relative">
-                        Users can generate direct HTTPS secure download links without exposing their cloud credentials or account identities. Links are cryptographically signed with MD5 hashing, feature high-speed routing, and automatically purge after 24 hours.
+                        Browse your cloud files directly in Telegram. Create new folders, set default upload destinations, rename files, and toggle access between Public and Private with a tap.
                     </p>
-                    <div class="bg-white dark:bg-darkBg p-4 rounded-xl border border-gray-200 dark:border-gray-700 font-mono text-xs text-gray-700 dark:text-gray-300 break-words">
-                        <span class="text-primary font-semibold">Architecture:</span> Automated daemon sweeps expired database tokens and securely executes internal file purge protocols.
-                    </div>
                 </div>
 
-                <!-- Feature 6: Drive Explorer & Privacy Controls -->
+                <!-- Feature 6: Quota & Trash Management -->
                 <div class="group bg-gray-50 dark:bg-darkCard rounded-2xl p-8 border border-gray-200 dark:border-gray-700/80 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                     <div class="flex items-center gap-3 mb-4 relative">
                         <span class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-primary font-bold text-lg shadow-inner">6</span>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Cloud Explorer & Privacy</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Storage & Trash Management</h3>
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed relative">
-                        A dynamic hierarchical browser within Telegram. Create directories, configure default upload destinations, inline-rename assets, and toggle privacy between <strong>Public (Anyone with link)</strong> and <strong>Private (Restricted)</strong>.
+                        Check your total storage limit and available free space instantly. The bot also includes a Trash Bin feature so you can easily restore accidentally deleted files or empty the trash permanently.
                     </p>
-                    <div class="bg-white dark:bg-darkBg p-4 rounded-xl border border-gray-200 dark:border-gray-700 font-mono text-xs text-gray-700 dark:text-gray-300 break-words">
-                        <span class="text-primary font-semibold">API Utilization:</span> <code>files.list</code>, <code>files.create</code>, and dynamic <code>permissions.create / delete</code>.
-                    </div>
-                </div>
-
-                <!-- Feature 7: Direct Cloud-to-Telegram Stream -->
-                <div class="group bg-gray-50 dark:bg-darkCard rounded-2xl p-8 border border-gray-200 dark:border-gray-700/80 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                    <div class="flex items-center gap-3 mb-4 relative">
-                        <span class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-primary font-bold text-lg shadow-inner">7</span>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Direct Cloud-to-Telegram Downlink</h3>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed relative">
-                        Inspect stored files and send them straight back to Telegram. Assets stream directly from cloud storage into native media formats (compressed Photos, Video players, or Documents) via customized binary stream buffers.
-                    </p>
-                    <div class="bg-white dark:bg-darkBg p-4 rounded-xl border border-gray-200 dark:border-gray-700 font-mono text-xs text-gray-700 dark:text-gray-300 break-all">
-                        <span class="text-primary font-semibold">API Utilization:</span> <code>GET /drive/v3/files/{fileId}?alt=media</code> piped into a virtual <code>io.IOBase</code> stream.
-                    </div>
-                </div>
-
-                <!-- Feature 8: Quota & Trash Management -->
-                <div class="group bg-gray-50 dark:bg-darkCard rounded-2xl p-8 border border-gray-200 dark:border-gray-700/80 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                    <div class="flex items-center gap-3 mb-4 relative">
-                        <span class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-primary font-bold text-lg shadow-inner">8</span>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Analytics & Storage Quota</h3>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed relative">
-                        Run deep cloud audits detailing total quota, free capacity, file distributions, and largest stored assets. Includes an integrated Trash Bin interface for selective one-click file restoration or permanent deletion.
-                    </p>
-                    <div class="bg-white dark:bg-darkBg p-4 rounded-xl border border-gray-200 dark:border-gray-700 font-mono text-xs text-gray-700 dark:text-gray-300 break-words">
-                        <span class="text-primary font-semibold">API Utilization:</span> <code>about.get(fields="storageQuota")</code>, <code>files.update(trashed=false)</code>.
-                    </div>
                 </div>
 
             </div>

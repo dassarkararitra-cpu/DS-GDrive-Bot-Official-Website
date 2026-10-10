@@ -3,183 +3,506 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DS GDrive Bot | Manage Google Drive via Telegram</title>
+    <title>DS GDrive Bot | Telegram to Google Drive File Manager</title>
+    
+    <!-- Favicon for search engine snippet and browser tabs -->
     <link rel="icon" type="image/png" href="36735.png">
-    <meta name="description" content="Manage your Google Drive directly from Telegram. Upload, stream, and clone files with our Free and Pro bots.">
+    
+    <!-- Search engine optimization -->
+    <meta name="description" content="Stream, upload, clone, and manage Google Drive files straight through Telegram without wasting mobile data. Available in Free and limitless Pro editions.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'media',
             theme: {
                 extend: {
-                    colors: { primary: '#3b82f6', primaryHover: '#2563eb', darkBg: '#0f172a', darkCard: '#1e293b' }
+                    colors: {
+                        primary: '#3b82f6',
+                        primaryHover: '#2563eb',
+                        darkBg: '#0f172a',
+                        darkCard: '#1e293b',
+                        accentBlue: '#60a5fa'
+                    }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-darkBg dark:text-gray-200 font-sans antialiased">
+<body class="bg-gray-50 text-gray-800 dark:bg-darkBg dark:text-gray-200 font-sans antialiased transition-colors duration-300 overflow-x-hidden">
 
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar (Restored cleanly to original design: Home, Privacy, Terms, Open Bot) -->
     <nav class="fixed w-full z-50 bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 top-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <img src="36735.png" alt="DS GDrive Bot Logo" class="h-10 w-10 mr-3 rounded-full shadow-sm">
-                    <span class="font-bold text-xl tracking-tight text-gray-900 dark:text-white">DS GDrive</span>
+                    <span class="font-bold text-xl tracking-tight text-gray-900 dark:text-white">DS GDrive Bot</span>
                 </div>
+                <!-- Links (Desktop) -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#compare" class="text-sm font-medium hover:text-primary transition-colors">Free vs Pro</a>
-                    <a href="#pricing" class="text-sm font-medium hover:text-primary transition-colors">Pricing</a>
-                    <a href="#setup-guide" class="text-sm font-medium hover:text-primary transition-colors">Pro Setup Guide</a>
+                    <a href="/" class="text-sm font-medium text-primary transition-colors">Home</a>
+                    <a href="privacy" class="text-sm font-medium hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="terms" class="text-sm font-medium hover:text-primary transition-colors">Terms of Service</a>
+                    <a href="https://t.me/DS_GDrive_bot" target="_blank" class="bg-primary hover:bg-primaryHover text-white px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                        Open Bot
+                    </a>
                 </div>
-                <div class="flex items-center space-x-3">
-                    <a href="https://t.me/aritrads" target="_blank" class="text-sm font-medium text-gray-500 hover:text-primary">Support (@aritrads)</a>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <a href="https://t.me/DS_GDrive_bot" target="_blank" class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium shadow-md">Open Bot</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 tracking-tight mb-6 leading-tight">
-            Manage Google Drive from Telegram
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold tracking-widest uppercase mb-6 border border-blue-200 dark:border-blue-800 shadow-sm">
+            High-Speed Cloud Management
+        </div>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 tracking-tight mb-6 leading-tight">
+            Manage Google Drive Files <br class="hidden md:block"> Directly Inside Telegram
         </h1>
-        <p class="mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-400 mx-auto mb-10">
-            Transfer files, bypass slow downloads, and organize your cloud directly from your chat. Choose the bot that fits your workflow.
+        <p class="mt-4 max-w-3xl text-lg md:text-xl text-gray-600 dark:text-gray-400 mx-auto mb-8 leading-relaxed">
+            Eliminate double bandwidth usage and local storage burnout. Stream media, clone cloud assets instantly, generate clean download links, and organize your files without opening heavy cloud apps.
         </p>
+
+        <!-- 10-Day Pro Trial Banner -->
+        <div class="max-w-xl mx-auto mb-10 p-4 rounded-2xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 border border-blue-200 dark:border-blue-800/80 shadow-sm">
+            <span class="inline-block bg-primary text-white text-xs font-bold px-2.5 py-0.5 rounded-full uppercase mb-2">Special Offer</span>
+            <p class="text-sm md:text-base font-semibold text-gray-900 dark:text-white">
+                Claim a 10-Day Pro Trial Completely Free
+            </p>
+            <p class="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">
+                Experience full speeds, limitless transfers, and web uploads before committing. Reach out directly on Telegram to activate your trial.
+            </p>
+        </div>
+
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://t.me/DS_GDrive_bot" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all">Launch Free Bot</a>
-            <a href="https://t.me/DS_GDrive_Pro_bot" target="_blank" class="bg-primary hover:bg-primaryHover text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all">Launch Pro Bot</a>
+            <a href="https://t.me/DS_GDrive_bot" target="_blank" class="bg-gray-900 hover:bg-black dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100 text-white text-lg px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg hover:-translate-y-1 flex items-center gap-2">
+                <span>Start Free Bot</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            <a href="https://t.me/DS_GDrive_Pro_bot" target="_blank" class="bg-primary hover:bg-primaryHover text-white text-lg px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/40 hover:-translate-y-1 flex items-center gap-2">
+                <span>Launch Pro Bot</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </a>
         </div>
     </section>
 
-    <!-- Bot Comparison Section -->
-    <section id="compare" class="py-16 bg-white dark:bg-darkCard/40 border-t border-gray-100 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Choose Your Engine</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Free Bot Card -->
-                <div class="bg-gray-50 dark:bg-darkCard rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-sm relative">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">DS GDrive Bot (Free)</h3>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-6 font-mono">Scope: auth/drive.file (Limited Access)</p>
-                    <ul class="space-y-4 mb-8 text-gray-600 dark:text-gray-300">
-                        <li class="flex items-start gap-2">✓ <span><strong>Privacy First:</strong> The bot can only see and manage files inside the specific folder it creates. It cannot read your other Drive files.</span></li>
-                        <li class="flex items-start gap-2">✓ <span><strong>Drive Explorer:</strong> Browse, manage, and interact with the app-created files right inside Telegram.</span></li>
-                        <li class="flex items-start gap-2">✓ <span><strong>Transfers:</strong> Pull files/links to Drive up to <strong>3 GB per file</strong>.</span></li>
-                        <li class="flex items-start gap-2">✓ <span><strong>Download to Telegram:</strong> Bring Drive files back to your chat (Up to <strong>2 GB</strong> limit).</span></li>
-                        <li class="flex items-start gap-2">✓ <span><strong>Temp Links:</strong> Generate 24-hour self-destructing download links (Up to <strong>1 GB</strong>).</span></li>
-                        <li class="flex items-start gap-2 text-orange-600 dark:text-orange-400">⚠ <span><strong>Limits:</strong> 1 active process at a time. Strict daily transfer quotas apply.</span></li>
-                    </ul>
-                </div>
-
-                <!-- Pro Bot Card -->
-                <div class="bg-blue-50 dark:bg-blue-900/10 rounded-2xl p-8 border-2 border-primary shadow-lg relative">
-                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg uppercase">Premium</div>
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">DS GDrive Bot Pro</h3>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-6 font-mono">Scope: auth/drive (Full Access - BYOC)</p>
-                    <ul class="space-y-4 mb-8 text-gray-700 dark:text-gray-300">
-                        <li class="flex items-start gap-2">✓ <span><strong>Limitless Transfers:</strong> No file size limits or strict quotas. *(Fair usage monitored to prevent abuse. Files remain completely private; only transfer volume is monitored. Abuse results in a block).*</span></li>
-                        <li class="flex items-start gap-2">✓ <span><strong>Full Drive Explorer:</strong> Complete access to browse and manage your entire Google Drive.</span></li>
-                        <li class="flex items-start gap-2">✓ <span><strong>Instant Cloning:</strong> Send a public Drive link and clone it instantly to your Drive.</span></li>
-                        <li class="flex items-start gap-2">✓ <span><strong>Secure Web Upload:</strong> Generate a one-time link to receive files from others. Bypasses WhatsApp/Telegram speed limits and generates a direct download link. Stream uploaded videos directly via VLC!</span></li>
-                        <li class="flex items-start gap-2 text-blue-600 dark:text-blue-400">⚡ <span><strong>Coming Soon:</strong> Cloud Unzip, Full Folder Copy, and Team/Shared Drive support.</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-16 bg-gray-50 dark:bg-darkBg">
+    <!-- Why I Built This Bot (Mission & Trust) -->
+    <section class="py-16 bg-white dark:bg-darkCard/30 border-t border-gray-100 dark:border-gray-800">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white mb-8">Upgrade to Pro</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                <div class="bg-white dark:bg-darkCard p-6 rounded-xl border border-gray-200 dark:border-gray-700">
-                    <h4 class="font-bold text-xl mb-2">Indian Users</h4>
-                    <p class="text-3xl font-extrabold text-primary mb-4">₹49 <span class="text-base text-gray-500 font-normal">/ month</span></p>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Pay easily via any UPI app. Contact Support on Telegram to upgrade instantly.</p>
-                </div>
-                <div class="bg-white dark:bg-darkCard p-6 rounded-xl border border-gray-200 dark:border-gray-700">
-                    <h4 class="font-bold text-xl mb-2">International Users</h4>
-                    <p class="text-3xl font-extrabold text-primary mb-4">₹100 <span class="text-base text-gray-500 font-normal">PhonePe Gift Card</span></p>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Purchase a ₹100 INR PhonePe Gift Card via platforms like <strong>Bitrefill</strong> (using Crypto) or other sites (using PayPal). Send the gift card code to Support to unlock 1 month of Pro. *(Indian users can use this method too, though UPI is cheaper!)*</p>
+            <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white mb-6">Why We Built DS GDrive</h2>
+            <div class="space-y-4 text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-left bg-gray-50 dark:bg-darkCard p-8 rounded-3xl border border-gray-200 dark:border-gray-700/80 shadow-sm">
+                <p>
+                    Downloading massive files to your phone or computer just to re-upload them to Google Drive is frustrating. It eats away your mobile data cap, drains your battery, takes hours on slow connections, and fills up your local storage with temporary files you don't even plan to keep locally.
+                </p>
+                <p>
+                    We built <strong>DS GDrive</strong> to connect Telegram directly to Google Drive at high server speeds. Whether you are archiving media channels, transferring direct web links, or sharing large assets with friends, the bot does all the heavy lifting on high-speed cloud networks.
+                </p>
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-primary font-bold">
+                            👨‍💻
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-900 dark:text-white">Developer Backed & Truly Transparent</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Direct human support whenever you need assistance.</p>
+                        </div>
+                    </div>
+                    <a href="https://t.me/aritrads" target="_blank" class="inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                        Message Dev on Telegram (@aritrads) &rarr;
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BYOC Setup Guide -->
-    <section id="setup-guide" class="py-16 bg-white dark:bg-darkCard/40 border-t border-gray-100 dark:border-gray-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Pro Setup: Bring Your Own Credentials (BYOC)</h2>
-                <p class="mt-4 text-gray-600 dark:text-gray-400">To give the Pro bot full access to your Drive securely, you must generate your own API credentials in Google Cloud.</p>
-            </div>
-
-            <!-- Security Callout -->
-            <div class="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-6 mb-8 rounded-r-lg">
-                <h4 class="font-bold text-yellow-800 dark:text-yellow-200 mb-2">Security Note: Are my Client ID and Secret safe?</h4>
-                <p class="text-sm text-yellow-700 dark:text-yellow-300">
-                    Yes. The Client ID and Client Secret <strong>do not contain your personal files or passwords</strong>. They simply act as a "nametag" for your bot to talk to Google. Having these keys alone is <strong>not sufficient</strong> to access your account. After providing them to the bot, you will still undergo a secure Google Login screen where you explicitly grant permission (OAuth token). Download your JSON file and keep it safe; it's required to run your Pro engine.
+    <!-- Deep Breakdown: Free Bot vs Pro Bot -->
+    <section class="py-20 bg-gray-50 dark:bg-darkBg border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">Comprehensive Bot Comparison</h2>
+                <p class="mt-4 text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    Choose between our privacy-isolated Free Tier or our unrestricted, high-performance Pro Tier.
                 </p>
             </div>
 
-            <!-- Steps -->
-            <div class="space-y-6">
-                <div class="flex gap-4">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">1</div>
-                    <div>
-                        <h4 class="text-lg font-bold dark:text-white">Create a Google Cloud Project</h4>
-                        <p class="text-gray-600 dark:text-gray-400">Go to the <a href="https://console.cloud.google.com/" target="_blank" class="text-primary hover:underline">Google Cloud Console</a>. Click the project dropdown at the top and select <strong>New Project</strong>. Name it and click Create.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                
+                <!-- Free Bot Detailed Card -->
+                <div class="flex flex-col bg-white dark:bg-darkCard rounded-3xl p-8 border border-gray-200 dark:border-gray-700 shadow-sm relative">
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <span class="text-xs font-bold tracking-wider uppercase text-gray-500 dark:text-gray-400">Daily Utility</span>
+                            <h3 class="text-2xl font-black text-gray-900 dark:text-white">DS GDrive Bot (Free)</h3>
+                        </div>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs font-mono">auth/drive.file</span>
                     </div>
+                    
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+                        Designed for casual day-to-day transfers with maximum automated isolation. The bot can only read files it creates itself.
+                    </p>
+
+                    <div class="space-y-4 text-sm text-gray-600 dark:text-gray-300 flex-grow mb-8">
+                        <div class="p-3.5 bg-gray-50 dark:bg-darkBg/60 rounded-xl border border-gray-100 dark:border-gray-800">
+                            <strong class="text-gray-900 dark:text-white block mb-1">🔒 Isolated App Directory:</strong>
+                            Uses Google's restricted permission scope. The bot can never see, modify, or list any preexisting files or private folders on your personal Google Drive.
+                        </div>
+                        <div class="p-3.5 bg-gray-50 dark:bg-darkBg/60 rounded-xl border border-gray-100 dark:border-gray-800">
+                            <strong class="text-gray-900 dark:text-white block mb-1">📦 3 GB Transfer Cap:</strong>
+                            Push Telegram files, audio, documents, and web links up to 3 GB per transfer straight to your designated cloud folder.
+                        </div>
+                        <div class="p-3.5 bg-gray-50 dark:bg-darkBg/60 rounded-xl border border-gray-100 dark:border-gray-800">
+                            <strong class="text-gray-900 dark:text-white block mb-1">📥 2 GB Telegram Downlinks:</strong>
+                            Pull files from your app-created cloud folder straight back down into native Telegram chat messages (up to Telegram's 2 GB limit).
+                        </div>
+                        <div class="p-3.5 bg-gray-50 dark:bg-darkBg/60 rounded-xl border border-gray-100 dark:border-gray-800">
+                            <strong class="text-gray-900 dark:text-white block mb-1">⏳ 24-Hour Expiring Links (1 GB Limit):</strong>
+                            Generate quick HTTPS download links for yourself or friends that safely self-destruct after 24 hours.
+                        </div>
+                        <div class="p-3.5 bg-gray-50 dark:bg-darkBg/60 rounded-xl border border-gray-100 dark:border-gray-800">
+                            <strong class="text-gray-900 dark:text-white block mb-1">🗂️ In-Chat Folder Explorer:</strong>
+                            Browse, organize, and rename your bot-managed uploads directly via interactive inline Telegram buttons.
+                        </div>
+                        <div class="p-3.5 bg-amber-50 dark:bg-amber-950/20 rounded-xl border border-amber-200 dark:border-amber-900/40 text-amber-900 dark:text-amber-200">
+                            <strong class="block mb-1">⚠️ Free Tier Restrictions:</strong>
+                            Limited to 1 active background transfer process at a time. Total daily transfer bandwidth is strictly capped to protect shared server resources.
+                        </div>
+                    </div>
+
+                    <a href="https://t.me/DS_GDrive_bot" target="_blank" class="w-full text-center py-3 px-4 rounded-xl font-bold bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white transition-all">
+                        Launch Free Bot (@DS_GDrive_bot)
+                    </a>
                 </div>
-                <div class="flex gap-4">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">2</div>
-                    <div>
-                        <h4 class="text-lg font-bold dark:text-white">Enable the Google Drive API</h4>
-                        <p class="text-gray-600 dark:text-gray-400">Navigate to <strong>APIs & Services > Library</strong>. Search for "Google Drive API" and click <strong>Enable</strong>.</p>
+
+                <!-- Pro Bot Detailed Card -->
+                <div class="flex flex-col bg-white dark:bg-darkCard rounded-3xl p-8 border-2 border-primary shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-extrabold px-4 py-1.5 rounded-bl-xl tracking-wider uppercase">
+                        Limitless Powerhouse
                     </div>
+                    
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <span class="text-xs font-bold tracking-wider uppercase text-primary">Unrestricted Power</span>
+                            <h3 class="text-2xl font-black text-gray-900 dark:text-white">DS GDrive Bot Pro</h3>
+                        </div>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300 rounded-full text-xs font-mono mr-24">auth/drive (BYOC)</span>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+                        Complete Google Drive sovereignty. Run with your own cloud console credentials for unrestricted access, high speeds, and full drive control.
+                    </p>
+
+                    <div class="space-y-4 text-sm text-gray-600 dark:text-gray-300 flex-grow mb-8">
+                        <div class="p-3.5 bg-blue-50/50 dark:bg-blue-950/30 rounded-xl border border-blue-100 dark:border-blue-900/50">
+                            <strong class="text-primary block mb-1">🚀 Truly Limitless Transfers:</strong>
+                            No artificial 3 GB ceilings and no transfer volume caps. Run massive files without interruptions. 
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mt-1">*(Fair usage applies to protect server stability. Your file contents are 100% private and never inspected, but aggregate bandwidth volume is monitored. Commercial abuse or flooding will lead to a block).*</span>
+                        </div>
+                        <div class="p-3.5 bg-blue-50/50 dark:bg-blue-950/30 rounded-xl border border-blue-100 dark:border-blue-900/50">
+                            <strong class="text-primary block mb-1">⚡ Instant Server-Side Cloning:</strong>
+                            Send any public Google Drive file link and duplicate it directly into your Drive instantly. It transfers directly between Google servers without routing through your device.
+                        </div>
+                        <div class="p-3.5 bg-blue-50/50 dark:bg-blue-950/30 rounded-xl border border-blue-100 dark:border-blue-900/50">
+                            <strong class="text-primary block mb-1">🌐 Secure Web Upload & VLC Direct Streaming:</strong>
+                            Frustrated by Telegram or WhatsApp download speeds when someone sends you a file? Generate a one-time upload link and send it to them. They upload through their browser, and you get an immediate direct download link. If it's a video, stream it in high definition right inside VLC without downloading the full file first!
+                        </div>
+                        <div class="p-3.5 bg-blue-50/50 dark:bg-blue-950/30 rounded-xl border border-blue-100 dark:border-blue-900/50">
+                            <strong class="text-primary block mb-1">📂 Full Drive Explorer:</strong>
+                            Browse your entire Google Drive directory tree, not just an isolated bot folder. Move, delete, rename, and retrieve any stored file right from Telegram.
+                        </div>
+                        <div class="p-3.5 bg-blue-50/50 dark:bg-blue-950/30 rounded-xl border border-blue-100 dark:border-blue-900/50">
+                            <strong class="text-primary block mb-1">🔮 Upcoming Roadmap Included:</strong>
+                            Pro users get automatic access to upcoming releases: Cloud Unzip, whole folder mirroring, and Google Workspace Team/Shared Drive support.
+                        </div>
+                    </div>
+
+                    <a href="https://t.me/DS_GDrive_Pro_bot" target="_blank" class="w-full text-center py-3.5 px-4 rounded-xl font-bold bg-primary hover:bg-primaryHover text-white shadow-md hover:shadow-primary/40 transition-all">
+                        Upgrade to Pro (@DS_GDrive_Pro_bot)
+                    </a>
                 </div>
-                <div class="flex gap-4">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">3</div>
-                    <div>
-                        <h4 class="text-lg font-bold dark:text-white">Configure OAuth Consent</h4>
-                        <p class="text-gray-600 dark:text-gray-400">Go to <strong>APIs & Services > OAuth consent screen</strong>. Choose "External" and fill out the required app name and email fields. Save and continue.</p>
-                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why You Need to Switch to Pro -->
+    <section class="py-16 bg-white dark:bg-darkCard/40 border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold tracking-widest uppercase text-primary">Unbeatable Value</span>
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white mt-2">Why Switch to Pro?</h2>
+                <p class="text-gray-600 dark:text-gray-400 mt-2">More than just an upgrade: it's your personal high-speed cloud workstation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-gray-50 dark:bg-darkCard border border-gray-200 dark:border-gray-700">
+                    <div class="text-3xl mb-3">💸</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Unbelievably Affordable</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        At just ₹49/month (less than a cup of coffee), you unlock cloud infrastructure that normally costs ten times more on generic multi-cloud tools.
+                    </p>
                 </div>
-                <div class="flex gap-4">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">4</div>
-                    <div>
-                        <h4 class="text-lg font-bold dark:text-white">Create Credentials (Desktop Application)</h4>
-                        <p class="text-gray-600 dark:text-gray-400">Navigate to <strong>Credentials</strong>. Click <strong>+ Create Credentials > OAuth client ID</strong>. <br>
-                        <span class="text-red-500 font-medium">Important:</span> Under Application Type, you MUST select <strong>Desktop application</strong>. Name it and click Create.</p>
-                    </div>
+
+                <div class="p-6 rounded-2xl bg-gray-50 dark:bg-darkCard border border-gray-200 dark:border-gray-700">
+                    <div class="text-3xl mb-3">⚡</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Eliminate File Size Bottlenecks</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Never worry about hitting a 3 GB limit or daily quotas again. Move massive archives, complete series, raw footage, or heavy software seamlessly.
+                    </p>
                 </div>
-                <div class="flex gap-4">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">5</div>
-                    <div>
-                        <h4 class="text-lg font-bold dark:text-white">Download JSON</h4>
-                        <p class="text-gray-600 dark:text-gray-400">A popup will appear with your Client ID and Secret. Click the <strong>Download JSON</strong> button. You will provide this file to the Pro bot to establish your secure connection.</p>
-                    </div>
+
+                <div class="p-6 rounded-2xl bg-gray-50 dark:bg-darkCard border border-gray-200 dark:border-gray-700">
+                    <div class="text-3xl mb-3">🛡️</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Complete Privacy & Control</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        With BYOC, your credentials belong to you in your Google Cloud project. You can inspect every transfer and revoke access at any time directly through Google.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Transparent Pricing Section -->
+    <section class="py-16 bg-gray-50 dark:bg-darkBg border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white mb-4">Straightforward Pricing</h2>
+            <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto mb-12">
+                Transparent rates with no hidden fees or automatic recurring card charges.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                
+                <!-- Indian Users Card -->
+                <div class="bg-white dark:bg-darkCard p-8 rounded-3xl border border-gray-200 dark:border-gray-700 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block px-3 py-1 bg-green-100 dark:bg-green-950 text-green-700 dark:text-green-300 font-bold text-xs rounded-full uppercase mb-4">
+                            Instant Automated Verification
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Indian Users</h3>
+                        <p class="text-4xl font-black text-primary my-4">₹49 <span class="text-base text-gray-500 font-normal">/ month</span></p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Pay using any UPI App (Google Pay, PhonePe, Paytm, FamApp, or BHIM). Once paid, our system automatically verifies the 12-digit UTR transaction ID and unlocks Pro access in seconds without waiting for manual checks!
+                        </p>
+                    </div>
+                    <a href="https://t.me/DS_GDrive_Pro_bot" target="_blank" class="w-full text-center py-3 rounded-xl bg-primary hover:bg-primaryHover text-white font-bold transition-all">
+                        Pay via UPI & Activate Instantly
+                    </a>
+                </div>
+
+                <!-- International Users Card -->
+                <div class="bg-white dark:bg-darkCard p-8 rounded-3xl border border-gray-200 dark:border-gray-700 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-bold text-xs rounded-full uppercase mb-4">
+                            Worldwide Support
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">International Users</h3>
+                        <p class="text-4xl font-black text-primary my-4">₹100 INR <span class="text-base text-gray-500 font-normal">Gift Card / mo</span></p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Because UPI is exclusive to India, international users can easily get Pro by providing a <strong>₹100 INR PhonePe Gift Card</strong>. Follow the step-by-step purchasing guide below using Crypto, PayPal, or Cards.
+                        </p>
+                    </div>
+                    <a href="https://t.me/aritrads" target="_blank" class="w-full text-center py-3 rounded-xl bg-gray-900 hover:bg-black dark:bg-gray-800 dark:hover:bg-gray-700 text-white font-bold transition-all">
+                        Send Gift Card to @aritrads
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed International Payment Guide -->
+    <section class="py-16 bg-white dark:bg-darkCard/40 border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold tracking-widest uppercase text-primary">Zero Knowledge Needed</span>
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white mt-2">How International Users Can Buy a PhonePe Gift Card</h2>
+                <p class="text-gray-600 dark:text-gray-400 mt-2">Simple steps to grab an Indian voucher from any country in minutes.</p>
+            </div>
+
+            <div class="bg-gray-50 dark:bg-darkCard p-8 rounded-3xl border border-gray-200 dark:border-gray-700 space-y-6">
+                <div>
+                    <h3 class="font-bold text-lg text-gray-950 dark:text-white mb-2">Step 1: Search for Trusted Retailers</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Open Google and search for terms like:
+                    </p>
+                    <div class="mt-2 p-3 bg-white dark:bg-darkBg rounded-xl border border-gray-200 dark:border-gray-800 font-mono text-xs text-primary space-y-1">
+                        <div>&bull; "Buy PhonePe Gift Card India online"</div>
+                        <div>&bull; "PhonePe INR gift card Bitrefill"</div>
+                        <div>&bull; "Purchase Indian digital voucher PayPal"</div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg text-gray-950 dark:text-white mb-2">Step 2: Choose Your Preferred Payment Method</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                        <li><strong>Using Cryptocurrency:</strong> Platforms like <strong>Bitrefill</strong> allow you to buy Indian digital gift cards instantly using Bitcoin, USDT, Ethereum, and more.</li>
+                        <li><strong>Using PayPal, Apple Pay, or Credit Cards:</strong> Global digital voucher marketplaces like OffGamers, Coinsbee, and SEAGM stock digital Indian gift cards accessible via conventional checkout.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg text-gray-950 dark:text-white mb-2">Step 3: Select the ₹100 INR Value</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Select a denomination of <strong>₹100 INR</strong> (usually equivalent to ~$1.20 USD). Complete checkout with your email to receive the digital code.
+                    </p>
+                </div>
+
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-6">
+                    <h3 class="font-bold text-lg text-gray-950 dark:text-white mb-2">Step 4: Claim Your Pro Bot Access</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        Send the 16-digit voucher code and PIN to developer <a href="https://t.me/aritrads" target="_blank" class="text-primary font-bold hover:underline">@aritrads</a> on Telegram. Once verified and claimed, your Telegram ID will be manually whitelisted for 1 full month of Pro access!
+                    </p>
+                    <p class="text-xs text-amber-700 dark:text-amber-400 italic">
+                        *Note for Indian users: You can also use gift cards if you prefer, but UPI directly inside the bot is cheaper (₹49) and completely automatic.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Google Cloud BYOC Guide -->
+    <section class="py-20 bg-gray-50 dark:bg-darkBg border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 text-center">
+                <span class="text-xs font-bold tracking-widest uppercase text-primary">Step-By-Step Walkthrough</span>
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white mt-2">Bring Your Own Credentials (BYOC) Guide</h2>
+                <p class="text-gray-600 dark:text-gray-400 mt-2">
+                    How to configure your own free Google Cloud Project for the Pro Bot. No coding or prior experience required.
+                </p>
+            </div>
+
+            <!-- Detailed Security & Safety Explanation -->
+            <div class="bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 p-6 rounded-2xl mb-12 shadow-sm">
+                <div class="flex items-center gap-2 text-primary font-bold text-lg mb-2">
+                    <span>🛡️</span>
+                    <h3>Are My Client ID and Secret Safe with DS GDrive?</h3>
+                </div>
+                <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+                    <strong>Yes, 100% safe.</strong> Your Client ID and Client Secret <em>do not contain your files, passwords, or personal account data</em>. They act purely as an authorized digital ID card that tells Google: "This application is allowed to ask for Drive access."
+                </p>
+                <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+                    Having these credentials alone is <strong>never sufficient</strong> to access your files. Access is only established when you complete Google's official OAuth consent screen and approve the connection yourself.
+                </p>
+                <p class="text-xs text-gray-600 dark:text-gray-400">
+                    Always store your downloaded credentials JSON file securely on your own device. You remain in control and can revoke access via your Google Security dashboard anytime.
+                </p>
+            </div>
+
+            <!-- Steps Detailed List -->
+            <div class="space-y-8">
+                
+                <!-- Step 1 -->
+                <div class="flex gap-4 p-6 bg-white dark:bg-darkCard rounded-2xl border border-gray-200 dark:border-gray-700">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-2xl bg-blue-100 dark:bg-blue-900/60 text-primary font-black flex items-center justify-center">1</div>
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-bold text-gray-900 dark:text-white">Create a New Google Cloud Project</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Open the official <a href="https://console.cloud.google.com/" target="_blank" class="text-primary font-semibold hover:underline">Google Cloud Console</a> and sign in with your Google account.
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Click the project dropdown in the top header (it may display an existing project or say "Select a project"). Click <strong>New Project</strong> in the top right of the modal. Name it <code>DS GDrive Pro</code> and click <strong>Create</strong>. Wait 5-10 seconds for Google to initialize the project, then make sure it is selected in the top bar.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex gap-4 p-6 bg-white dark:bg-darkCard rounded-2xl border border-gray-200 dark:border-gray-700">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-2xl bg-blue-100 dark:bg-blue-900/60 text-primary font-black flex items-center justify-center">2</div>
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-bold text-gray-900 dark:text-white">Enable the Google Drive API</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Open the left navigation menu (hamburger icon on the top left) and click <strong>APIs & Services</strong> &gt; <strong>Library</strong>.
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            In the search bar, type <code class="bg-gray-100 dark:bg-darkBg px-2 py-0.5 rounded text-primary">Google Drive API</code> and press enter. Select the Google Drive API card and click the blue <strong>Enable</strong> button.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex gap-4 p-6 bg-white dark:bg-darkCard rounded-2xl border border-gray-200 dark:border-gray-700">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-2xl bg-blue-100 dark:bg-blue-900/60 text-primary font-black flex items-center justify-center">3</div>
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-bold text-gray-900 dark:text-white">Configure the OAuth Consent Screen & Publish</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            In the left sidebar, navigate to <strong>APIs & Services</strong> &gt; <strong>OAuth consent screen</strong>.
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Choose <strong>External</strong> under User Type and click <strong>Create</strong>.
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Fill in the required fields: set an App Name (e.g., <code>DS GDrive Pro</code>), pick your own email for "User support email", and enter your email at the bottom under "Developer contact information". Leave the rest blank and click <strong>Save and Continue</strong> through the Scopes and Test Users screens.
+                        </p>
+                        <p class="text-sm text-amber-800 dark:text-amber-300 font-semibold bg-amber-50 dark:bg-amber-950/30 p-3 rounded-xl border border-amber-200 dark:border-amber-900/40">
+                            Crucial Step: Once back on the OAuth Consent summary dashboard, find "Publishing status" and click the <strong>Publish App</strong> button to confirm. This makes sure your login token does not expire every 7 days!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex gap-4 p-6 bg-white dark:bg-darkCard rounded-2xl border border-gray-200 dark:border-gray-700">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-2xl bg-blue-100 dark:bg-blue-900/60 text-primary font-black flex items-center justify-center">4</div>
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-bold text-gray-900 dark:text-white">Create Desktop Application Credentials</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            In the left sidebar, click <strong>Credentials</strong>.
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Click <strong>+ Create Credentials</strong> at the top of the screen and choose <strong>OAuth client ID</strong>.
+                        </p>
+                        <p class="text-sm text-red-600 dark:text-red-400 font-bold leading-relaxed">
+                            Important: In the "Application type" dropdown, you MUST select "Desktop app" (Desktop application). Do not pick Web application.
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Set a name (or keep the default) and click <strong>Create</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="flex gap-4 p-6 bg-white dark:bg-darkCard rounded-2xl border border-gray-200 dark:border-gray-700">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-2xl bg-blue-100 dark:bg-blue-900/60 text-primary font-black flex items-center justify-center">5</div>
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-bold text-gray-900 dark:text-white">Download the JSON File & Start the Pro Bot</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            A modal titled "OAuth client created" will pop up. Click the <strong>Download JSON</strong> button.
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Open <a href="https://t.me/DS_GDrive_Pro_bot" target="_blank" class="text-primary font-bold hover:underline">@DS_GDrive_Pro_bot</a> on Telegram, run <code>/start</code>, and send this downloaded JSON file when requested. You will be authenticated immediately!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Email removed, direct Telegram link preserved) -->
     <footer class="bg-white dark:bg-darkBg border-t border-gray-200 dark:border-gray-800 pt-12 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 dark:text-gray-400">
-                <div class="flex items-center space-x-2 mb-4 md:mb-0">
-                    <img src="36735.png" alt="Logo" class="h-6 w-6 rounded-full grayscale opacity-70">
-                    <span>&copy; 2026 DS GDrive Bot. All rights reserved.</span>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="36735.png" alt="DS GDrive Bot Logo" class="h-8 w-8 mr-2 rounded-full grayscale opacity-70 hover:grayscale-0 transition-all">
+                    <span class="text-gray-500 dark:text-gray-400 font-medium tracking-tight">DS GDrive Bot Ecosystem</span>
                 </div>
-                <div>
-                    <a href="https://t.me/aritrads" target="_blank" class="hover:text-primary transition-colors">Contact Support: @aritrads</a>
+                
+                <div class="flex space-x-6 mb-4 md:mb-0 text-sm">
+                    <a href="/" class="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors">Home</a>
+                    <a href="privacy" class="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="terms" class="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+            
+            <div class="mt-8 border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>&copy; 2026 DS GDrive Bot. All rights reserved.</p>
+                <div class="mt-2 md:mt-0 flex items-center space-x-4">
+                    <span>Direct Developer Contact:</span>
+                    <a href="https://t.me/aritrads" target="_blank" class="text-primary font-semibold hover:underline">@aritrads</a>
                 </div>
             </div>
         </div>

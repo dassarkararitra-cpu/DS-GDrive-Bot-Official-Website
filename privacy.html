@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | DS GDrive Bot</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="36735.png">
+    
+    <!-- Search engine optimization -->
+    <meta name="description" content="Privacy Policy for DS GDrive Bot and DS GDrive Pro Bot ecosystem, detailing our data handling, security practices, and compliance with Google API policies.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -14,14 +21,15 @@
                         primary: '#3b82f6',
                         primaryHover: '#2563eb',
                         darkBg: '#0f172a',
-                        darkCard: '#1e293b'
+                        darkCard: '#1e293b',
+                        accentBlue: '#60a5fa'
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-darkBg dark:text-gray-200 font-sans antialiased transition-colors duration-300">
+<body class="bg-gray-50 text-gray-800 dark:bg-darkBg dark:text-gray-200 font-sans antialiased transition-colors duration-300 overflow-x-hidden">
 
     <!-- Navigation Bar -->
     <nav class="fixed w-full z-50 bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 top-0">
@@ -35,6 +43,7 @@
                 <!-- Links (Desktop) -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="/" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="help" class="text-sm font-medium hover:text-primary transition-colors">Help & Settings</a>
                     <a href="privacy" class="text-sm font-medium text-primary transition-colors border-b-2 border-primary pb-1">Privacy Policy</a>
                     <a href="terms" class="text-sm font-medium hover:text-primary transition-colors">Terms of Service</a>
                     <a href="https://t.me/DS_GDrive_bot" target="_blank" class="bg-primary hover:bg-primaryHover text-white px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
@@ -43,7 +52,7 @@
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <a href="https://t.me/DS_GDrive_bot" target="_blank" class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Open Bot</a>
+                    <a href="https://t.me/DS_GDrive_bot" target="_blank" class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium shadow-md">Open Bot</a>
                 </div>
             </div>
         </div>
@@ -63,37 +72,51 @@
             <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-bl-full -mr-10 -mt-10 pointer-events-none"></div>
             
             <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed relative">
-                Welcome to the Privacy Policy for <strong>DS GDrive Bot</strong>, developed by the <strong>DS GDrive Bot Team</strong>. Your privacy and security are our highest priorities. This policy explicitly outlines how we collect, use, protect, and handle your data when you use our Telegram bot to interact with cloud storage protocols.
+                Welcome to the Privacy Policy for <strong>DS GDrive Bot</strong>, developed by the <strong>DS GDrive Bot Team</strong>[span_0](start_span)[span_0](end_span). Your privacy and security are our highest priorities[span_1](start_span)[span_1](end_span). This policy explicitly outlines how we collect, use, protect, and handle your data when you use our Telegram bot to interact with cloud storage protocols[span_2](start_span)[span_2](end_span).
             </p>
             
             <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">1. Information We Collect</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">When you use DS GDrive Bot, our application will access the data you have provided to us via official Google OAuth 2.0. We specifically collect and securely store your Google OAuth access and refresh tokens, as well as your basic Telegram User ID to link your chat session. We request access to view, edit, create, and delete only the specific cloud files you interact with through the bot interface.</p>
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">1. Information We Collect (Dual Architecture)</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">Because our ecosystem operates on a dual-bot model, the data and permissions we request depend on which bot you are using:</p>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-50 dark:bg-darkBg/60 rounded-xl border border-gray-100 dark:border-gray-800">
+                        <strong class="text-gray-900 dark:text-white block mb-1">A. Standard Bot (@DS_GDrive_bot) — Verified Minimal Access:</strong>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            This bot operates as a verified Google application using our own Client ID and Client Secret. We strictly request the limited <code class="text-primary font-mono text-xs">auth/drive.file</code> scope. This means we securely collect and store your generated OAuth access/refresh tokens, but the bot can <strong>only</strong> access, view, or modify files that it directly created. It cannot read your preexisting personal Drive files.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-blue-50/50 dark:bg-blue-950/30 rounded-xl border border-blue-100 dark:border-blue-900/50">
+                        <strong class="text-primary block mb-1">B. Pro Bot (@DS_GDrive_Pro_bot) — Bring Your Own Credentials (BYOC):</strong>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                            To provide unrestricted full Drive access (<code class="text-primary font-mono text-xs">auth/drive</code>) without compromising your privacy, the Pro Bot utilizes a BYOC architecture. You generate and provide your own Google Cloud Developer credentials. <strong>You act as the developer of your own application.</strong> We securely store the <code class="text-primary font-mono text-xs">credentials.json</code> file and tokens you provide strictly to automate file processing on your behalf, acting solely as an authorized client interface.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">2. How We Use Your Information</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">We will use your data solely to provide you with the services you requested. Specifically, your OAuth tokens are used to stream files from Telegram directly into your private cloud storage, clone links, and allow you to manage (rename, delete, move) your files directly from the Telegram interface. We do not use your data for advertising, market research, or to train artificial intelligence models.</p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">We will use your data solely to provide you with the services you requested[span_3](start_span)[span_3](end_span). Specifically, your OAuth tokens and credentials are used to stream files from Telegram directly into your private cloud storage, clone links, and allow you to manage (rename, delete, move) your files directly from the Telegram interface[span_4](start_span)[span_4](end_span). We do not use your data for advertising, market research, or to train artificial intelligence models[span_5](start_span)[span_5](end_span).</p>
             </div>
             
             <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">3. Data Sharing and Transfer</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">We do not sell your data to third parties. We do not transfer or disclose your information to third parties for purposes other than the ones provided (providing the core file-transfer service), unless explicitly required by applicable law.</p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">We do not sell your data to third parties[span_6](start_span)[span_6](end_span). We do not transfer or disclose your information to third parties for purposes other than the ones provided (providing the core file-transfer service), unless explicitly required by applicable law[span_7](start_span)[span_7](end_span).</p>
             </div>
 
             <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">4. Data Security</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Security procedures are in place to protect the confidentiality of your data. We use industry-standard encryption to protect your information, specifically securing your OAuth tokens both in transit and at rest. No human developer or third party is permitted to access, read, or download your personal cloud files.</p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Security procedures are in place to protect the confidentiality of your data[span_8](start_span)[span_8](end_span). We use industry-standard encryption to protect your information, specifically securing your OAuth tokens and BYOC credentials both in transit and at rest[span_9](start_span)[span_9](end_span). No human developer or third party is permitted to access, read, or download your personal cloud files[span_10](start_span)[span_10](end_span).</p>
             </div>
 
             <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">5. Data Retention and Deletion</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">We retain your encrypted tokens only for as long as you maintain an active connection with the bot. We do not permanently store your actual files on our transit servers. You may revoke the bot's access at any time via your Google Account security settings. To request immediate deletion of any stored user data or tokens from our database, you can contact the developer team directly.</p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">We retain your encrypted tokens and credentials only for as long as you maintain an active connection with the bot[span_11](start_span)[span_11](end_span). We do not permanently store your actual files on our transit servers[span_12](start_span)[span_12](end_span). You may revoke the bot's access at any time via your Google Account security settings, or by deleting your BYOC credentials from your Google Cloud Console. To request immediate deletion of any stored user data or tokens from our database, you can contact the developer team directly[span_13](start_span)[span_13](end_span).</p>
             </div>
 
             <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">6. Cookies and Telemetry</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Because our primary interface is operated via Telegram, we do not utilize web tracking cookies or fingerprinting scripts. Backend operational logs are kept strictly for maintaining system integrity, diagnosing errors, and preventing abuse. These logs are automatically rotated and securely purged.</p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Because our primary interface is operated via Telegram, we do not utilize web tracking cookies or fingerprinting scripts[span_14](start_span)[span_14](end_span). Backend operational logs are kept strictly for maintaining system integrity, diagnosing errors, and preventing abuse[span_15](start_span)[span_15](end_span). These logs are automatically rotated and securely purged[span_16](start_span)[span_16](end_span).</p>
             </div>
 
             <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
@@ -102,7 +125,7 @@
                         <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         API Limited Use Policy
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">DS GDrive Bot's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" class="text-primary font-semibold hover:underline">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">DS GDrive Bot's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" class="text-primary font-semibold hover:underline">Google API Services User Data Policy</a>, including the Limited Use requirements[span_17](start_span)[span_17](end_span).</p>
                 </div>
             </div>
 
@@ -115,11 +138,12 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center mb-4 md:mb-0">
                     <img src="36735.png" alt="DS GDrive Bot Logo" class="h-8 w-8 mr-2 rounded-full grayscale opacity-70 hover:grayscale-0 transition-all">
-                    <span class="text-gray-500 dark:text-gray-400 font-medium tracking-tight">DS GDrive Bot Engine</span>
+                    <span class="text-gray-500 dark:text-gray-400 font-medium tracking-tight">DS GDrive Bot Ecosystem</span>
                 </div>
                 
                 <div class="flex space-x-6 mb-4 md:mb-0 text-sm">
                     <a href="/" class="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors">Home</a>
+                    <a href="help" class="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors">Help & Settings</a>
                     <a href="privacy" class="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors">Privacy Policy</a>
                     <a href="terms" class="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors">Terms of Service</a>
                 </div>
@@ -127,10 +151,10 @@
             
             <div class="mt-8 border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
                 <p>&copy; 2026 DS GDrive Bot. All rights reserved.</p>
-                <div class="mt-2 md:mt-0 flex items-center space-x-4">
-                    <span>Engineered by the DS Development Team</span>
-                    <span>•</span>
-                    <a href="mailto:dsaritra.guy09@gmail.com" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">Contact Support</a>
+                <div class="mt-2 md:mt-0 flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+                    <a href="https://t.me/+syjnVJUx03tjZDk1" target="_blank" class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors">Official Telegram Channel</a>
+                    <span class="hidden md:inline text-gray-300 dark:text-gray-700">•</span>
+                    <span>Direct Developer Contact: <a href="https://t.me/aritrads" target="_blank" class="text-primary font-semibold hover:underline">@aritrads</a></span>
                 </div>
             </div>
         </div>

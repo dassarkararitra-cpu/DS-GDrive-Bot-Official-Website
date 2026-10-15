@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service | DS GDrive Bot</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="36735.png">
+    
+    <!-- Search engine optimization -->
+    <meta name="description" content="Terms of Service for DS GDrive Bot and DS GDrive Pro Bot ecosystem, covering our standard verified service and Bring Your Own Credentials (BYOC) architecture.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -14,14 +21,15 @@
                         primary: '#3b82f6',
                         primaryHover: '#2563eb',
                         darkBg: '#0f172a',
-                        darkCard: '#1e293b'
+                        darkCard: '#1e293b',
+                        accentBlue: '#60a5fa'
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-darkBg dark:text-gray-200 font-sans antialiased transition-colors duration-300">
+<body class="bg-gray-50 text-gray-800 dark:bg-darkBg dark:text-gray-200 font-sans antialiased transition-colors duration-300 overflow-x-hidden">
 
     <!-- Navigation Bar -->
     <nav class="fixed w-full z-50 bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 top-0">
@@ -35,6 +43,7 @@
                 <!-- Links (Desktop) -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="/" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="help" class="text-sm font-medium hover:text-primary transition-colors">Help & Settings</a>
                     <a href="privacy" class="text-sm font-medium hover:text-primary transition-colors">Privacy Policy</a>
                     <a href="terms" class="text-sm font-medium text-primary transition-colors border-b-2 border-primary pb-1">Terms of Service</a>
                     <a href="https://t.me/DS_GDrive_bot" target="_blank" class="bg-primary hover:bg-primaryHover text-white px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
@@ -43,7 +52,7 @@
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <a href="https://t.me/DS_GDrive_bot" target="_blank" class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Open Bot</a>
+                    <a href="https://t.me/DS_GDrive_bot" target="_blank" class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium shadow-md">Open Bot</a>
                 </div>
             </div>
         </div>
@@ -62,30 +71,94 @@
         <div class="bg-white dark:bg-darkCard rounded-2xl p-8 md:p-10 border border-gray-200 dark:border-gray-700 shadow-xl shadow-gray-200/50 dark:shadow-none space-y-8 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-bl-full -mr-10 -mt-10 pointer-events-none"></div>
             
+            <!-- Section 1 -->
             <div class="relative">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">1. Acceptable Use Policy</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">By using the DS GDrive Bot, you agree to use the service strictly for lawful purposes. You are solely responsible for the content you transfer. You must not use the bot to upload, stream, host, or distribute illegal content, malware, explicit materials, or copyrighted materials for which you do not possess the appropriate licenses or rights. Abuse of the bot's server resources or attempting to bypass security and API rate limits will result in an immediate and permanent ban from using the service.</p>
-            </div>
-            
-            <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">2. User Accounts and Security</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Your authentication relies on bridging your secure cloud account with your Telegram profile. You are completely responsible for safeguarding your Telegram account. Any actions performed via your connected Telegram session are presumed to be authorized by you. We are not liable for unauthorized access resulting from compromised Telegram accounts.</p>
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">1. Service Architecture & Operating Models</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                    The DS GDrive ecosystem operates across two distinct operational models designed for user privacy and data sovereignty:
+                </p>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-50 dark:bg-darkBg/60 rounded-xl border border-gray-100 dark:border-gray-800">
+                        <strong class="text-gray-900 dark:text-white block mb-1">A. Standard Bot (@DS_GDrive_bot) — Verified Minimal Scope:</strong>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            The standard bot is an application utilizing our verified Google OAuth credentials. It is strictly constrained to the restricted <code class="text-primary font-mono text-xs">https://www.googleapis.com/auth/drive.file</code> scope. It can only access, modify, or view files that were directly uploaded or created through the bot itself. It is technologically impossible for the standard bot to inspect, view, or alter preexisting personal files on your Google Drive.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-blue-50/50 dark:bg-blue-950/30 rounded-xl border border-blue-100 dark:border-blue-900/50">
+                        <strong class="text-primary block mb-1">B. Pro Bot (@DS_GDrive_Pro_bot) — Bring Your Own Credentials (BYOC):</strong>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                            The Pro bot delivers comprehensive Drive management (<code class="text-primary font-mono text-xs">https://www.googleapis.com/auth/drive</code>) exclusively through a Bring Your Own Credentials (BYOC) infrastructure. You independently create and administer a personal Google Cloud Console project, generating your own unique Client ID and Client Secret. <strong>You are the legal and technical developer of your own Google Cloud application.</strong> DS GDrive Pro operates purely as a client-side automation engine executing routines at your direct instruction using your own self-managed credentials.
+                        </p>
+                    </div>
+                </div>
             </div>
 
+            <!-- Section 2 -->
             <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">3. Disclaimer of Warranties</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">The DS GDrive Bot is provided on an "AS IS" and "AS AVAILABLE" basis. While we strive to maintain maximum uptime and reliability for file transfers, we make no warranties, expressed or implied, regarding the continuous availability of the service, the speed of transfers, or the absolute prevention of data loss. We are not responsible for any corrupted files or failed transfers caused by network timeouts, API limits, or quotas. You are fully responsible for maintaining secondary backups of your critical data.</p>
-            </div>
-            
-            <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">4. Service Availability and Modifications</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">We reserve the right to modify, suspend, throttle, or permanently discontinue the service (or any part thereof) at any time, with or without prior notice. We are not liable to you or to any third party for any modification, suspension, or discontinuation of the service. We also reserve the right to update these Terms of Service at any time; continued use of the bot constitutes acceptance of the new terms.</p>
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">2. BYOC Developer Responsibilities</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
+                    When utilizing DS GDrive Pro via BYOC:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <li>You maintain sole ownership of your Google Cloud Project, its API keys, OAuth consent configurations, and publishing statuses (Testing vs. Published).</li>
+                    <li>You are solely responsible for compliance with the <a href="https://developers.google.com/terms" target="_blank" class="text-primary hover:underline">Google APIs Terms of Service</a> and Google Cloud Platform policies associated with your developer account.</li>
+                    <li>You acknowledge that our developers do not own, manage, or audit your personal Google Cloud Project. Any warnings displayed by Google (such as "Google hasn't verified this app") stem from your self-created project's publication status and are acknowledged and authorized directly by you as its developer.</li>
+                </ul>
             </div>
 
+            <!-- Section 3 -->
+            <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">3. Acceptable Use Policy</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
+                    You agree to use our bots and transfer pipelines strictly for lawful purposes[span_1](start_span)[span_1](end_span). You retain full responsibility for all content passed through your sessions[span_2](start_span)[span_2](end_span). You strictly agree not to use the service to:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <li>Upload, clone, or distribute malware, trojans, ransomware, or malicious executables[span_3](start_span)[span_3](end_span).</li>
+                    <li>Transfer or distribute illegal media, explicit content, or copyrighted material for which you do not possess verified rights or licenses[span_4](start_span)[span_4](end_span).</li>
+                    <li>Engage in abusive activity designed to flood server bandwidth, interfere with service performance for other users, or exceed reasonable Fair Usage limits[span_5](start_span)[span_5](end_span).</li>
+                </ul>
+                <p class="text-sm text-red-600 dark:text-red-400 mt-3 font-medium">
+                    Violating this policy will result in immediate termination of bot access and permanent blacklisting without refund[span_6](start_span)[span_6](end_span).
+                </p>
+            </div>
+            
+            <!-- Section 4 -->
+            <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">4. Authentication & Security of Credentials</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Your authentication is maintained by pairing your Telegram account with your cloud session or personal project credentials[span_7](start_span)[span_7](end_span). You are entirely responsible for protecting your Telegram account from unauthorized access[span_8](start_span)[span_8](end_span). In the Pro bot, you are responsible for maintaining the privacy of your downloaded <code class="font-mono text-xs bg-gray-100 dark:bg-darkBg px-1.5 py-0.5 rounded">credentials.json</code> file. If you suspect your credentials have been compromised, you retain the ability and responsibility to immediately revoke them from your Google Cloud Console.
+                </p>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">5. Disclaimer of Warranties & Quotas</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
+                    The DS GDrive Bot services are provided on an "AS IS" and "AS AVAILABLE" basis[span_9](start_span)[span_9](end_span). While our systems are engineered for high-availability cloud routing:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <li>We make no guarantees regarding uninterrupted uptime, transmission speeds, or specific network latencies[span_10](start_span)[span_10](end_span).</li>
+                    <li>We are not responsible for transfer interruptions, timeouts, or failures caused by Telegram network limits, Google API rate limitations, or daily cloud quotas enforced by Google on your account[span_11](start_span)[span_11](end_span).</li>
+                    <li>In BYOC mode, token expirations resulting from keeping your Google Cloud Project in "Testing" mode (which enforces a 7-day token cycle) are a function of Google's policy and not a software defect.</li>
+                    <li>You are strictly advised to maintain independent backups of critical data[span_12](start_span)[span_12](end_span). We are not liable for data loss or file corruption during transit[span_13](start_span)[span_13](end_span).</li>
+                </ul>
+            </div>
+            
+            <!-- Section 6 -->
+            <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">6. Service Modifications & Subscriptions</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    We reserve the right to modify, upgrade, or suspend the transit engine or any feature set at any time[span_14](start_span)[span_14](end_span). Pricing for Pro subscriptions (whether purchased via automated UPI verification or digital gift card vouchers) applies to access during the active billing term. Subscriptions are non-refundable once activated and verified on your account.
+                </p>
+            </div>
+
+            <!-- Section 7 -->
             <div class="border-t border-gray-100 dark:border-gray-700/60 pt-8 relative">
                 <div class="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/10 p-6 rounded-xl border border-red-100 dark:border-red-900/30">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">5. Limitation of Liability</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">In no event shall the developers of DS GDrive Bot be held liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use the service, including but not limited to damages for loss of profits, data, or other intangible losses, regardless of whether we were advised of the possibility of such damages.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">7. Limitation of Liability</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                        To the maximum extent permitted by law, the developers and operators of DS GDrive Bot shall not be held liable for any direct, indirect, incidental, punitive, or consequential damages resulting from your use of the service[span_15](start_span)[span_15](end_span). This includes, without limitation, loss of data, corrupted cloud files, account suspensions imposed by Google or Telegram, or unauthorized access resulting from user negligence[span_16](start_span)[span_16](end_span).
+                    </p>
                 </div>
             </div>
 
@@ -98,11 +171,12 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center mb-4 md:mb-0">
                     <img src="36735.png" alt="DS GDrive Bot Logo" class="h-8 w-8 mr-2 rounded-full grayscale opacity-70 hover:grayscale-0 transition-all">
-                    <span class="text-gray-500 dark:text-gray-400 font-medium tracking-tight">DS GDrive Bot Engine</span>
+                    <span class="text-gray-500 dark:text-gray-400 font-medium tracking-tight">DS GDrive Bot Ecosystem</span>
                 </div>
                 
                 <div class="flex space-x-6 mb-4 md:mb-0 text-sm">
                     <a href="/" class="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors">Home</a>
+                    <a href="help" class="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors">Help & Settings</a>
                     <a href="privacy" class="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors">Privacy Policy</a>
                     <a href="terms" class="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors">Terms of Service</a>
                 </div>
@@ -110,10 +184,10 @@
             
             <div class="mt-8 border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
                 <p>&copy; 2026 DS GDrive Bot. All rights reserved.</p>
-                <div class="mt-2 md:mt-0 flex items-center space-x-4">
-                    <span>Engineered by the DS Development Team</span>
-                    <span>•</span>
-                    <a href="mailto:dsaritra.guy09@gmail.com" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">Contact Support</a>
+                <div class="mt-4 md:mt-0 flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+                    <a href="https://t.me/+syjnVJUx03tjZDk1" target="_blank" class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors">Official Telegram Channel</a>
+                    <span class="hidden md:inline text-gray-300 dark:text-gray-700">•</span>
+                    <span>Direct Developer Contact: <a href="https://t.me/aritrads" target="_blank" class="text-primary font-semibold hover:underline">@aritrads</a></span>
                 </div>
             </div>
         </div>

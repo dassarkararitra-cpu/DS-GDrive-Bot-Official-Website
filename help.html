@@ -65,7 +65,7 @@
             Help Center & User Manual
         </h1>
         <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            Understand how to navigate the bot interfaces, utilize advanced streaming features, and perfectly configure your Google Cloud BYOC project without getting stuck.
+            Understand how to navigate the bot interfaces, utilize advanced download bypasses, and perfectly configure your Google Cloud BYOC project without getting stuck.
         </p>
     </section>
 
@@ -144,7 +144,7 @@
                         </li>
                         <li class="flex items-start gap-3">
                             <code class="px-2 py-1 bg-blue-50 dark:bg-blue-900/30 text-primary border border-blue-200 dark:border-blue-800 rounded font-bold">/set_creds</code>
-                            <span>Crucial: Use this command to configure, update, or change your Google Cloud Client ID and Client Secret.</span>
+                            <span>Crucial: Use this command to initially configure, update, or change your Google Cloud Client ID and Secret.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <code class="px-2 py-1 bg-gray-100 dark:bg-darkBg text-primary rounded font-bold">/logout</code>
@@ -159,7 +159,7 @@
                         
                         <div class="p-4 bg-gray-50 dark:bg-darkBg/60 rounded-xl border border-gray-100 dark:border-gray-800">
                             <strong class="text-gray-900 dark:text-white flex items-center gap-2 mb-1">📁 Drive Explorer & Info</strong>
-                            Because Pro uses full `auth/drive` scope, this button grants you full access to browse, retrieve, delete, and manage your <em>entire</em> Google Drive directory from Telegram.
+                            Because Pro uses full `auth/drive` scope, this button grants you full access to browse, retrieve, delete, and manage your <em>entire</em> Google Drive directory directly from Telegram.
                         </div>
                         
                         <div class="p-4 bg-gray-50 dark:bg-darkBg/60 rounded-xl border border-gray-100 dark:border-gray-800">
@@ -190,36 +190,43 @@
         </div>
     </section>
 
-    <!-- Part 2: Feature Deep Dives -->
+    <!-- Part 2: Feature Deep Dives (The Attractive Pitch) -->
     <section class="py-16 bg-white dark:bg-darkCard/20 border-b border-gray-200 dark:border-gray-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <span class="text-xs font-bold tracking-widest uppercase text-primary">Advanced Features</span>
-                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white mt-2">How Pro Features Actually Work</h2>
+                <span class="text-xs font-bold tracking-widest uppercase text-primary">Pro Superpowers</span>
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white mt-2">Bypassing Google's Walls</h2>
             </div>
 
             <div class="space-y-8 text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                 
-                <div class="p-8 bg-gray-50 dark:bg-darkCard rounded-3xl border border-gray-200 dark:border-gray-700 shadow-sm">
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">🌪️ Instant Server-Side Cloning</h3>
-                    <p class="mb-4">Normally, if someone sends you a public Google Drive link (like a massive 50GB game file or video course), you have to download it to your PC, and then manually re-upload it to your own Drive. This takes hours and ruins your data cap.</p>
-                    <p>With the Pro Bot, you just paste that public link into Telegram. The bot instructs Google's servers to copy the file directly to your Drive. Because the transfer happens <em>inside</em> Google's internal data centers, it bypasses your home network completely. A 50GB file will clone into your Drive in roughly 1 to 2 seconds.</p>
+                <div class="p-8 md:p-10 bg-gray-50 dark:bg-darkCard rounded-3xl border border-gray-200 dark:border-gray-700 shadow-sm">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-3">
+                        <span class="w-10 h-10 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center text-xl">🔗</span>
+                        1-Click Direct Download Links
+                    </h3>
+                    <p class="mb-4">Ever tried to download a massive game or movie from a shared Google Drive link, only to get slammed with the annoying <em>"File is too large for Google to scan for viruses"</em> warning screen? It completely breaks automated downloaders and forces you to click through multiple pages.</p>
+                    <p class="mb-5"><strong>The Pro Bot shatters that wall.</strong> Send any public Google Drive link to the bot, and it instantly generates a raw, 1-Click Direct Download link. No preview pages. No warnings. You can literally plug this link straight into IDM (Internet Download Manager), wget, or curl, and pull the file at maximum speed instantly.</p>
                 </div>
 
-                <div class="p-8 bg-gray-50 dark:bg-darkCard rounded-3xl border border-gray-200 dark:border-gray-700 shadow-sm">
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">🎬 Secure Web Uploads & VLC Streaming</h3>
-                    <p class="mb-4">Telegram has strict limits on file sizes and download speeds. If a friend needs to send you a massive raw video file, don't make them use Telegram or WhatsApp. Click <strong>"Secure Web Upload"</strong> in the Pro bot.</p>
-                    <p class="mb-4">It gives you a custom webpage link. Your friend opens it on their browser and uploads the file at full speed. It goes directly into your Google Drive.</p>
-                    <p class="p-4 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/40 rounded-xl text-amber-900 dark:text-amber-300 text-sm">
-                        <strong>The VLC Magic:</strong> Once uploaded, the bot generates a Direct Download link for you. If it's a video file, you don't even need to download it. Open the <strong>VLC Media Player app</strong>, go to "Open Network Stream," and paste our direct link. You can stream the massive 4K video instantly without taking up a single megabyte of local storage!
-                    </p>
+                <div class="p-8 md:p-10 bg-gray-50 dark:bg-darkCard rounded-3xl border border-gray-200 dark:border-gray-700 shadow-sm">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-3">
+                        <span class="w-10 h-10 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center text-xl">🎬</span>
+                        Web Uploads & Instant VLC Streaming
+                    </h3>
+                    <p class="mb-4">Telegram strictly caps your file sizes, and WhatsApp crushes your video quality. So how are friends supposed to send you massive, high-quality raw files?</p>
+                    <p class="mb-5">With the Pro bot, you just click <strong>"Secure Web Upload"</strong>. The bot gives you a custom webpage link. You send that link to your friend, they open it in their browser, and they can upload massive files <em>directly</em> into your Google Drive—bypassing Telegram entirely.</p>
+                    <div class="p-5 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/40 rounded-xl">
+                        <strong class="text-amber-900 dark:text-amber-300 block mb-1 text-lg">The VLC Magic ✨</strong>
+                        <p class="text-sm text-amber-800 dark:text-amber-200/80">Once they finish uploading, the bot immediately gives you a direct link. If they sent a massive 4K video, you don't even have to download it! Open the <strong>VLC Media Player app</strong>, go to "Open Network Stream," and paste the bot's direct link. You can stream the massive video instantly without eating up a single megabyte of your phone's local storage.</p>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Part 3: The Philosophy of BYOC -->
+    <!-- Part 3: The Philosophy of BYOC (Zero Panic) -->
     <section class="py-16 bg-gray-50 dark:bg-darkBg border-b border-gray-200 dark:border-gray-800">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -233,12 +240,12 @@
                     <strong>Why BYOC?</strong> If we hosted 10,000 users on a single, central Google Cloud Project, Google would severely throttle our API limits. Everyone's uploads would slow to a crawl, and centralizing that much access is a privacy nightmare. BYOC (Bring Your Own Credentials) turns you into your own server admin. You get dedicated, unthrottled API bandwidth, and absolute privacy because your data flows strictly between Telegram and <em>your personal</em> Google Cloud project. We never see it.
                 </p>
                 <p>
-                    <strong>What exactly are Client IDs and Secrets?</strong> Think of a <code>Client ID</code> as a username or a digital badge that identifies your app to Google ("Hi, I am DS GDrive"). The <code>Client Secret</code> is the password that proves your app is legitimate. Together, they authorize the bot to ask you for Drive access.
+                    <strong>What exactly are Client IDs and Secrets?</strong> Think of a <code>Client ID</code> as a username or a digital badge that identifies your app to Google. The <code>Client Secret</code> is the password that proves your app is legitimate. Together, they authorize the bot to ask you for Drive access.
                 </p>
-                <div class="p-5 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900/50 rounded-xl">
-                    <strong class="text-red-700 dark:text-red-400 flex items-center gap-2 mb-2">⚠️ The Risks of Leaking</strong>
-                    <p class="text-sm text-red-900 dark:text-red-300">
-                        While having just the JSON file isn't enough to steal your files (an attacker still needs you to click the Google Login approval screen), you must treat the downloaded credentials JSON file like a bank PIN. If leaked alongside an active token, bad actors could hijack your API quotas or potentially access your Drive. Never share your <code>credentials.json</code> file with anyone, not even our support team.
+                <div class="p-5 bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-900/40 rounded-xl">
+                    <strong class="text-green-800 dark:text-green-300 flex items-center gap-2 mb-2">🛡️ Zero Panic Security</strong>
+                    <p class="text-sm text-green-900 dark:text-green-200/80">
+                        You should treat your downloaded <code>credentials.json</code> file securely, just like a password. However, if you ever accidentally leak or share it, <strong>do not panic!</strong> Having the JSON file alone isn't enough to steal your files. You can simply log back into your Google Cloud console, delete that specific credential, and generate a brand new one in exactly 10 seconds. Your files remain perfectly safe.
                     </p>
                 </div>
             </div>
@@ -251,7 +258,7 @@
             <div class="text-center mb-16">
                 <span class="text-xs font-bold tracking-widest uppercase text-primary">The Ultimate Guide</span>
                 <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white mt-2">Configuring Google Cloud</h2>
-                <p class="mt-4 text-gray-600 dark:text-gray-400 text-lg">Follow this detailed, foolproof guide to perfectly set up your Google Cloud Console without getting stuck on Unverified App errors or expiring tokens.</p>
+                <p class="mt-4 text-gray-600 dark:text-gray-400 text-lg">Follow this detailed, foolproof guide to perfectly set up your Google Cloud Console without getting stuck on Branding pages, Unverified App errors, or expiring tokens.</p>
             </div>
 
             <div class="space-y-12">
@@ -270,79 +277,91 @@
                     </div>
                 </div>
 
-                <!-- Step 2 (The Dilemma) -->
+                <!-- Step 2 (Branding Page) -->
                 <div class="relative">
                     <div class="absolute -left-4 top-0 w-1 h-full bg-blue-100 dark:bg-blue-900/30 rounded"></div>
                     <div class="pl-6">
-                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Step 2: The OAuth Consent Screen</h3>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">Go to <strong>APIs & Services</strong> &gt; <strong>OAuth consent screen</strong>. Choose <strong>External</strong> and click Create. Fill in the App Name (<code>DS GDrive Pro</code>) and add your email to the two required support/developer email boxes. Save and continue to the end.</p>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Step 2: The App Branding Cheat Code</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Go to <strong>APIs & Services</strong> &gt; <strong>OAuth consent screen</strong>. Choose <strong>External</strong> and click Create. You are now on the App Branding page. Fill out these specific fields to trick Google into letting you publish the app later:</p>
                         
-                        <div class="mt-8 p-6 bg-gray-50 dark:bg-darkCard border border-gray-200 dark:border-gray-700 rounded-2xl shadow-sm">
-                            <h4 class="text-xl font-extrabold text-gray-900 dark:text-white mb-4">Crucial: The "Testing" vs "Published" Dilemma</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Many users get stuck here. You have to make a choice on the summary dashboard regarding your "Publishing status". Read carefully to choose what is best for you.</p>
-                            
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <!-- Testing Mode -->
-                                <div class="p-5 bg-white dark:bg-darkBg border border-gray-200 dark:border-gray-800 rounded-xl">
-                                    <h5 class="font-bold text-primary mb-2">Option A: Leave it in "Testing"</h5>
-                                    <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-300 mb-4">
-                                        <li>✅ <strong>Pros:</strong> You will not see any scary "Unsafe App" warnings when you log in. It is a smooth login process.</li>
-                                        <li>❌ <strong>Cons:</strong> Google forces Testing tokens to <strong>expire every 7 days</strong>. You will have to click the login link inside Telegram once a week to keep the bot working.</li>
-                                    </ul>
-                                    <div class="p-3 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/40 rounded-lg text-xs text-amber-900 dark:text-amber-300">
-                                        <strong>If you choose Testing:</strong> You MUST scroll down to "Test Users", click "Add Users", and type in your exact Gmail address. If you don't do this, Google will reject your login.
-                                    </div>
-                                </div>
-
-                                <!-- Published Mode -->
-                                <div class="p-5 bg-white dark:bg-darkBg border border-gray-200 dark:border-gray-800 rounded-xl">
-                                    <h5 class="font-bold text-primary mb-2">Option B: Click "Publish App"</h5>
-                                    <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-300 mb-4">
-                                        <li>✅ <strong>Pros:</strong> The login token lasts forever. You log in once, and the bot will work flawlessly for years without interruption.</li>
-                                        <li>❌ <strong>Cons:</strong> Because you are publishing an app requesting Drive access without paying for a corporate audit, Google will throw a massive red "Unverified App" warning when you log in. (We explain how to safely bypass this below).</li>
-                                    </ul>
-                                    <div class="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800/50 rounded-lg text-xs text-blue-900 dark:text-blue-300">
-                                        <strong>Highly Recommended:</strong> We strongly advise clicking "Publish App". Bypassing the warning is easy, and avoiding weekly logouts is worth it.
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="p-6 bg-gray-50 dark:bg-darkBg border border-gray-200 dark:border-gray-800 rounded-xl space-y-4 text-sm text-gray-700 dark:text-gray-300">
+                            <p>📝 <strong>App Name:</strong> <code>DS GDrive Pro</code></p>
+                            <p>📧 <strong>User Support Email:</strong> Select your own Gmail address.</p>
+                            <p class="text-amber-700 dark:text-amber-400 font-bold">🖼️ App Logo (Crucial): Google absolutely requires you to set an App Logo (Display Picture/DP) if you want to publish the app to avoid 7-day token expiries. Just upload any random image from your phone or download our bot's logo and upload it here.</p>
+                            <p>🔗 <strong>Application Homepage & Privacy Policy:</strong> You don't need to own a website! Just paste our domain: <code class="font-bold text-primary">https://dsgdrivebot.in</code> into both fields.</p>
+                            <p>📧 <strong>Developer Contact Info:</strong> Type your email again at the bottom, then click <strong>Save and Continue</strong> all the way to the end.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Step 3 -->
+                <!-- Step 3 (The Crossroads) -->
                 <div class="relative">
                     <div class="absolute -left-4 top-0 w-1 h-full bg-blue-100 dark:bg-blue-900/30 rounded"></div>
                     <div class="pl-6">
-                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Step 3: Creating Credentials</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Step 3: The Crossroads (Testing vs Publishing)</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">You are now back on the summary dashboard. You have to make a choice regarding your "Publishing status".</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                            
+                            <!-- Testing Mode -->
+                            <div class="p-6 bg-white dark:bg-darkCard border border-amber-200 dark:border-amber-900/50 rounded-2xl shadow-sm">
+                                <h4 class="text-lg font-bold text-amber-600 dark:text-amber-500 mb-2">Route A: Stay in "Testing" Mode</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">If you didn't upload a logo in Step 2, you are stuck in Testing mode. In Testing mode, Google forces your login token to <strong>expire every 7 days</strong>. You will have to log in via Telegram weekly.</p>
+                                <div class="p-3 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/40 rounded-lg text-sm text-amber-900 dark:text-amber-300">
+                                    <strong class="block mb-1">Crucial Step for Testers:</strong>
+                                    If you stay in Testing, you <strong>MUST</strong> scroll down to "Test Users", click "Add Users", and type in your exact Gmail address. If you don't add yourself as a test user, Google will completely block you from logging in, because testing apps are locked down to specifically approved people!
+                                </div>
+                            </div>
+
+                            <!-- Published Mode -->
+                            <div class="p-6 bg-white dark:bg-darkCard border-2 border-primary rounded-2xl shadow-md relative">
+                                <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-extrabold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Recommended</div>
+                                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Route B: Click "Publish App"</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">If you uploaded a logo and pasted the URLs in Step 2, you can click the <strong>Publish App</strong> button right now. We highly recommend this!</p>
+                                <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+                                    <li>✅ <strong>Permanent Token:</strong> Log in once, and the bot works flawlessly for years. No 7-day limits.</li>
+                                    <li>✅ <strong>No Test Users Needed:</strong> You don't have to manually whitelist your email.</li>
+                                    <li>⚠️ <strong>The Catch:</strong> It triggers an "Unverified App" warning during login, but bypassing it is completely safe and takes 2 seconds (explained in Step 5).</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative">
+                    <div class="absolute -left-4 top-0 w-1 h-full bg-blue-100 dark:bg-blue-900/30 rounded"></div>
+                    <div class="pl-6">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Step 4: Create & Download Credentials</h3>
                         <ol class="list-decimal list-inside space-y-4 text-gray-700 dark:text-gray-300">
                             <li>Go to <strong>Credentials</strong> in the left sidebar.</li>
                             <li>Click <strong>+ Create Credentials</strong> at the top and choose <strong>OAuth client ID</strong>.</li>
-                            <li><strong class="text-red-600 dark:text-red-400">CRITICAL:</strong> In the "Application type" dropdown, you MUST select <strong>"Desktop app"</strong>. If you select "Web application", the bot will break.</li>
-                            <li>Click Create. A window will pop up. Click <strong>Download JSON</strong>. Keep this file safe.</li>
+                            <li><strong class="text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-1 rounded">CRITICAL:</strong> In the "Application type" dropdown, you MUST select <strong>"Desktop app"</strong>. If you select "Web application", the bot will break immediately.</li>
+                            <li>Click Create. A window will pop up. Click <strong>Download JSON</strong>.</li>
                             <li>Open <a href="https://t.me/DS_GDrive_Pro_bot" target="_blank" class="text-primary font-bold hover:underline">@DS_GDrive_Pro_bot</a>, run <code>/set_creds</code>, and upload this file.</li>
                         </ol>
                     </div>
                 </div>
 
-                <!-- Step 4 (The Warning) -->
+                <!-- Step 5 (The Warning) -->
                 <div class="relative">
                     <div class="absolute -left-4 top-0 w-1 h-full bg-blue-100 dark:bg-blue-900/30 rounded"></div>
                     <div class="pl-6">
-                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Step 4: Bypassing the "Unverified App" Warning</h3>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">If you chose to "Publish" your app in Step 2, clicking the login link in Telegram will take you to a scary page that says <em>"Google hasn’t verified this app."</em></p>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Step 5: Bypassing the "Unverified App" Warning</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">If you chose the recommended "Publish" route in Step 3, clicking the login link in Telegram will take you to a scary red page that says <em>"Google hasn’t verified this app."</em></p>
                         
                         <div class="space-y-4 text-sm text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-darkCard p-6 rounded-2xl border border-gray-200 dark:border-gray-700">
-                            <p><strong>Why does this appear?</strong> Google flags any published app asking for Drive access to protect users from phishing scams.</p>
+                            <p><strong>Why does this appear?</strong> Google flags any published app asking for Drive access to protect normal users from phishing scams.</p>
                             <p><strong>Why doesn't the developer remove it?</strong> To remove this screen, a developer must pay thousands of dollars for an annual third-party security audit (CASA Tier 2). Since this BYOC project is entirely for your own personal use, paying for an audit is impossible and unnecessary.</p>
-                            <p><strong>Is it safe?</strong> Yes! It is 100% safe because <em>you</em> are the developer of the app. You are simply authorizing the Cloud Project you just created 5 minutes ago.</p>
+                            <p><strong>Is it safe?</strong> Yes! It is 100% safe because <em>you</em> are the developer of the app. You are simply authorizing the Cloud Project you just built for yourself.</p>
                             
                             <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
                                 <strong class="text-gray-900 dark:text-white block mb-3 text-lg">How to Bypass It:</strong>
-                                <ol class="list-decimal list-inside space-y-2">
-                                    <li>On the warning screen, look at the bottom left and click the small text that says <strong>"Advanced"</strong>.</li>
+                                <ol class="list-decimal list-inside space-y-2 font-medium">
+                                    <li>On the red warning screen, look at the bottom left and click the small text that says <strong>"Advanced"</strong>.</li>
                                     <li>More text will expand downwards. Click the link that says <strong>"Go to DS GDrive Pro (unsafe)"</strong>.</li>
-                                    <li>Click <strong>Continue</strong> on the final authorization screen. You are done!</li>
+                                    <li>Click <strong>Continue</strong> on the final authorization screen. You are done forever!</li>
                                 </ol>
                             </div>
                         </div>
